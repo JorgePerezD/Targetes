@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>targetes_flexbox</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+          min-height: 100%;  
+        }
+        img{
+            width: 100%;
+        }
+        body{
+            font-family: "Georgia" cursive;
+            font-size: 18px;
+            background: linear-gradient(38deg,blue,purple);
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            padding: 2em 4em;
+            justify-content: center;
+        }
+        .dissenyador{
+            display: flex;
+            flex-direction: column;
+            width: 25em;
+            margin: 1em;
+            background: rgba(240,240,240,0.9);
+            border-radius: 20px;
+            box-shadow: 0 0 30px purple
+        }
+        .dissenyador_img{
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            width: 100%;
+            height: 400px;
+            background: purple;
+        }
+        .dissenyador_img img{
+            height: 100%;
+            object-position: top;
+            object-fit: cover;
+            filter: grayscale(100%);
+            mix-blend-mode: hard-light;
+        }
+        .dissenyador:first-child .dissenyador_img img{
+            object-position: top;
+        }
+        .dissenyador:last-child .dissenyador_img img{
+            object-position: left;
+        }
+        header{
+            display: flex;
+            margin: 0.5em 1em;
+            justify-content: space-between;
+            border-bottom: 1px solid purple;
+            align-items: baseline;
+        }
+        h3{
+            font-style: italic;
+            font-weight: bold;
+        }
+        span{
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 0.9em;
+        }
+        .dissenyador_contingut{
+            display: flex;
+            flex-grow: 1em;
+            margin: 1em 1em 0.5em 1em;
+            font-size: 0.9em;
+            line-height: 1.4em;
+            text-align: justify;
+            hyphens: auto;
+        }
+        footer{
+            background: purple;
+            color: white;
+            font-size: 0.9em;
+            font-style: italic;
+            border-radius: 0 0 20px 20px;
+            padding: 0.6em;
+        }
+        @media(max-width:600px){
+            body{
+                font-size: 16px;
+            }
+            .container{
+                flex-direction: column;
+            }
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dissenyador">
+            <div class="dissenyador_img">
+                <img src="img/paula-scher.jpg" alt="Paula Scher">
+            </div>
+            <header>
+                <h3>Paula Scher</h3>
+                <span>1948</span>
+            </header>
+            <p class="dissenyador_contingut">
+                Paula Scher (Washington, 6 de octubre de 1948) es una diseñadora gráfica y artista estadounidense.También fue la primera directora de la diseñadora Pentagram, a la que se unió en 1991. 
+                Se trasladó a Nueva York y se inició en el mundo profesional encargándose de la maquetación de la sección infantil de la editorial Random House.
+                En 1982 inició su andadura en solitario y en 1984, junto con Terry Koppel fundó Koppel y Scher, compañía que estuvo en funcionamiento durante siete años y desde la que desarrollaron trabajos de identidad corporativa, campañas de publicidad y editorial.
+
+En 1991, Koppel aceptó el cargo de director creativo de la revista Esquire y Scher se unió a Pentagram, convirtiéndose en socia de la oficina de Nueva York
+            </p>
+            <footer class="dissenyador_peu">
+              Hoy en día ha diseñado para algunas de las identidades corporativas y logotipos más populares del panorama internacional, como el rediseño de la imagen de Windows y Citibank o el logotipo del MoMA y la identidad de The Metropolitan Opera.   
+            </footer>
+        </div>
+        <div class="dissenyador">
+            <div class="dissenyador_img">
+                <img src="img/Milton-Glaser.jpg" alt="Milton Glaser">
+            </div>
+            <header>
+                <h3>Milton Glaser</h3>
+                <span>1929</span>
+        </header>
+        <p class="dissenyador_contingut">
+         Milton Glaser, (n. 26 de junio de 1929 en el Bronx de Nueva York), es un ilustrador y diseñador muy prolífico conocido sobre todo por sus diseños para discos y libros.
+         Glaser estudió en la conocida Cooper Union entre 1948 y 1951 Y a través de una beca Fulbright, también estudió en la Academia de Bellas Artes de Bolonia, en Italia, donde estuvo con el pintor Giorgio Morandi. Fundó con Seymour Chwast el Push Pin Studio para, en 1974, crear su propia compañía.  
+         Ha creado más de 300 carteles entre los que se cuenta el famoso de Bob Dylan, un símbolo de los años sesenta. En el primer campo ha trabajo para publicaciones como Paris Macht, L´Express, Esquire o Village Voice y La Vanguardia (1987-1989) para realizar un cambio en esta publicación coincidiendo con su paso al color.
+         En identidad corporativa, desde finales de los setenta se encargó de un gran proyecto para la compañía Grand Union, una cadena de supermercados en los Estados Unidos. También creó el logo de DC Comics. En 1981 creó el conocido símbolo para la campaña I Love New York.  
+        </p>
+        <footer class="dissenyador_peu">
+         Glaser se ha dedicado al diseño editorial y a la identidad corporativa.   
+        </footer>
+        </div>
+    </div>
+</body>
+</html>
